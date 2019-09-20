@@ -1,0 +1,22 @@
+{
+  "name": "web-components-introduction-presentation",
+  "version": "1.0.0",
+  "description": "Introduction to Web Components",
+  "main": "index.js",
+  "scripts": {
+    "start": "mdx-deck deck.mdx"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/awayken/web-components-introduction-presentation.git"
+  },
+  "author": "Miles Rausch",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/awayken/web-components-introduction-presentation/issues"
+  },
+  "homepage": "https://github.com/awayken/web-components-introduction-presentation#readme",
+  "devDependencies": {
+    "mdx-deck": "^3.0.11"
+  }
+}
