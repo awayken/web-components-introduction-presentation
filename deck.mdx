@@ -1,15 +1,210 @@
-# This is the title of my deck
+import { Appear, Head, Image } from 'mdx-deck'
+import { FullScreenCode, Split } from 'mdx-deck/layouts'
 
----
+import Link from './components/Link'
 
-# About Me
+export { default as theme } from './theme'
 
----
+<Head>
+  <title>Introduction to Web Components</title>
+</Head>
 
-```jsx
-<CodeSnippet />
+# Introduction to Web Components
+
+by Miles Rausch
+
+[http://milesrausch.com](http://milesrausch.com)
+
+```notes
+Don't ramble. Go fast.
 ```
+---
+
+<Image src="./images/sponsors.png" />
+
+```notes
+Thank you to our sponsors.
+```
+---
+
+## Hyperlinks
+
+Slides:
+
+[github.com/awayken/web-components-introduction-presentation](https://github.com/awayken/web-components-introduction-presentation)
+
+Demo:
+
+[github.com/awayken/sustainable-cfs](https://github.com/awayken/sustainable-cfs)
 
 ---
 
-# The end
+<Image src="./images/me.jpg" size="contain" />
+
+```notes
+Miles Rausch, a Source Code Alchemist in Sioux Falls, SD.
+
+Blogs at http://milesrausch.com and writes at https://miles.ink.
+
+Developer for https://carsforsale.com.
+```
+---
+
+## We have a problem
+
+```notes
+As a concept.
+Apps are not original vision so devs drive that area.
+React, Vue, Angular came to the rescue.
+```
+---
+
+## Let's talk about history
+
+<Appear>
+  <span className="pill">YUI</span>
+  <span className="pill">jQueryUI</span>
+  <span className="pill">Angular</span>
+  <span className="pill">VueJS</span>
+  <span className="pill">React</span>
+  <span className="pill">Preact</span>
+  <span className="pill">Postact</span>
+</Appear>
+
+```notes
+Let's talk about the history of web UI and all these UI and web app frameworks.
+```
+---
+
+## Libraries Come At A Cost
+
+<Appear>
+  What if we could do it in the browser?
+</Appear>
+
+```notes
+They ship with features you won't use,
+have bugs you can't fix
+create a dependency you can't live without.
+...
+What if we could do it in the browser?
+```
+---
+
+ ## Introducing Web Components
+
+  * Create custom, reusable, encapsulated UI
+  * Ability to package HTML, CSS and JavaScript
+  * APIs can be used or polyfilled for modern browsers
+
+
+```notes
+A set of APIs and features for creating componentized UI.
+Independent technologies.
+```
+---
+
+## Web Components are...
+
+  * Custom Elements API
+  * Shadow DOM
+  * HTML Templates
+  * ES Modules
+
+```notes
+A set of APIs for creating componentized UI.
+Independent technologies.
+```
+---
+
+## Custom Elements API
+
+  * Foundation of Web Components
+  * Create new HTML tags
+  * Define tags in JavaScript
+
+```notes
+Foundation of web components
+Make your own HTML elements for fun and profit.
+```
+---
+
+## Shadow DOM
+
+  * Applies to a custom element
+  * Hides the styling and DOM tree
+  * Fully encapsulates component from user of component
+
+```notes
+Encapsulate your markup and styling.
+```
+---
+
+## HTML Templates
+
+  * Dormant HTML fragments that can be reused
+  * Wrap HTML in `<template>`
+  * Import the template node and append
+
+```notes
+Dormant: Images don't load, scripts don't run, etc.
+```
+---
+
+## ES Modules
+
+  * Better way to source JavaScript
+  * Adds import and export capability
+  * Modular and performant
+
+```notes
+
+```
+---
+
+Demo.
+
+---
+
+## We have a problem?
+
+  * Modern browsers only
+  * Specs still in flux
+  * Not as nice as React
+
+```notes
+Polyfills exist, but that's like shipping a library.
+v0s of Custom Elements and Shadow DOM are supported but V1 on its ways
+Ends up being a bunch of work you have to do yourself
+```
+---
+
+## Resources
+
+  * https://www.webcomponents.org
+  * https://developers.google.com/web/fundamentals/web-components
+  * https://css-tricks.com/an-introduction-to-web-components/
+  * https://www.polymer-project.org
+  * https://stenciljs.com
+
+```notes
+
+```
+---
+
+## Carsforsale.com Is Hiring
+
+Email <Link email="erin.mcmanus@carsforsale.com">Erin McManus</Link>
+
+```notes
+TIME: 45:00
+
+In-house recruiter. Very professional and confidential. I have his cards.
+```
+---
+
+Questions?
+
+---
+
+Thanks!

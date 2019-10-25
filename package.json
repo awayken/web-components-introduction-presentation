@@ -4,7 +4,12 @@
   "description": "Introduction to Web Components",
   "main": "index.js",
   "scripts": {
-    "start": "mdx-deck deck.mdx"
+    "start": "mdx-deck deck.mdx",
+    "build": "mdx-deck build deck.mdx",
+    "pdf": "mdx-deck pdf deck.mdx",
+    "image": "mdx-deck screenshot deck.mdx",
+    "help": "mdx-deck",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
@@ -17,6 +22,6 @@
   },
   "homepage": "https://github.com/awayken/web-components-introduction-presentation#readme",
   "devDependencies": {
-    "mdx-deck": "^3.0.11"
+    "mdx-deck": "^1.7.7"
   }
 }
