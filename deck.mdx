@@ -3,7 +3,7 @@ import { FullScreenCode, Split } from 'mdx-deck/layouts'
 
 import Link from './components/Link'
 
-export { default as theme } from './theme'
+export { default as theme } from './cfstheme'
 
 <Head>
   <title>Introduction to Web Components</title>
@@ -52,34 +52,36 @@ Developer for https://carsforsale.com.
 
 ## We have a problem
 
+<Appear>
+  <p>Reusing bits of UI on the web <em>is hard</em>.</p>
+</Appear>
+
 ```notes
-As a concept.
-Apps are not original vision so devs drive that area.
-React, Vue, Angular came to the rescue.
+Web started as a place to link text documents.
+Today it's a place to do everything.
+Apps have different needs than pages.
+...
+Reusing UI is hard.
 ```
 ---
 
-## Let's talk about history
+## We've tried to fix it
 
 <Appear>
-  <span className="pill">YUI</span>
-  <span className="pill">jQueryUI</span>
-  <span className="pill">Angular</span>
-  <span className="pill">VueJS</span>
-  <span className="pill">React</span>
-  <span className="pill">Preact</span>
-  <span className="pill">Postact</span>
+  <p>YUI, jQueryUI, Dojo, MooTools, Knockout, SproutCore, Bootstrap, Foundation, Material Design for Web, Kendo UI, Adobe AIR, Wakanda, Ember, GWT, Angular, VueJS, Svelte, React, Preact, Postact?</p>
 </Appear>
 
 ```notes
 Let's talk about the history of web UI and all these UI and web app frameworks.
+...
+List of frameworks
 ```
 ---
 
-## Libraries Come At A Cost
+## These solutions come at a cost
 
 <Appear>
-  What if we could do it in the browser?
+  <p>What if we could do it in the browser?</p>
 </Appear>
 
 ```notes
@@ -93,10 +95,11 @@ What if we could do it in the browser?
 
  ## Introducing Web Components
 
-  * Create custom, reusable, encapsulated UI
-  * Ability to package HTML, CSS and JavaScript
-  * APIs can be used or polyfilled for modern browsers
-
+<Appear>
+  <p>Create custom, reusable, encapsulated UI</p>
+  <p>Ability to package HTML, CSS and JavaScript</p>
+  <p>APIs can be used or polyfilled for modern browsers</p>
+</Appear>
 
 ```notes
 A set of APIs and features for creating componentized UI.
@@ -106,10 +109,12 @@ Independent technologies.
 
 ## Web Components are...
 
-  * Custom Elements API
-  * Shadow DOM
-  * HTML Templates
-  * ES Modules
+<Appear>
+  <p>Custom Elements API</p>
+  <p>Shadow DOM</p>
+  <p>HTML Templates</p>
+  <p>ES Modules</p>
+</Appear>
 
 ```notes
 A set of APIs for creating componentized UI.
@@ -119,9 +124,13 @@ Independent technologies.
 
 ## Custom Elements API
 
-  * Foundation of Web Components
-  * Create new HTML tags
-  * Define tags in JavaScript
+<Appear>
+  <p>Foundation of Web Components</p>
+  <p>Create new HTML tags</p>
+  <p>Define tags in JavaScript</p>
+  <p>"Reactions" give you lifecycle events</p>
+  <p>Bring your own render</p>
+</Appear>
 
 ```notes
 Foundation of web components
@@ -131,9 +140,12 @@ Make your own HTML elements for fun and profit.
 
 ## Shadow DOM
 
-  * Applies to a custom element
-  * Hides the styling and DOM tree
-  * Fully encapsulates component from user of component
+<Appear>
+  <p>Fully encapsulates component from user of component</p>
+  <p>DOM elements can't be queried or walked over</p>
+  <p>Styles don't leak out or leak in</p>
+  <p>As easy as <code>{`this.root = this.attachShadow({ mode: 'open' });`}</code></p>
+</Appear>
 
 ```notes
 Encapsulate your markup and styling.
@@ -142,9 +154,12 @@ Encapsulate your markup and styling.
 
 ## HTML Templates
 
-  * Dormant HTML fragments that can be reused
-  * Wrap HTML in `<template>`
-  * Import the template node and append
+<Appear>
+  <p>Dormant HTML fragments that can be reused</p>
+  <p>Wrap HTML in <code>{`<template>`}</code></p>
+  <p>Import the template node and append</p>
+  <p>You choose how to populate that template</p>
+</Appear>
 
 ```notes
 Dormant: Images don't load, scripts don't run, etc.
@@ -153,9 +168,12 @@ Dormant: Images don't load, scripts don't run, etc.
 
 ## ES Modules
 
-  * Better way to source JavaScript
-  * Adds import and export capability
-  * Modular and performant
+<Appear>
+  <p>Better way to source JavaScript</p>
+  <p>Adds import and export capability</p>
+  <p>Modular and performant</p>
+  <p><code>{`<script type="module" src="app.js" async></script>`}</code></p>
+</Appear>
 
 ```notes
 
@@ -166,16 +184,22 @@ Demo.
 
 ---
 
-## We have a problem?
+## Let's use Web Components!
 
-  * Modern browsers only
-  * Specs still in flux
-  * Not as nice as React
+<p>Absolutely! Except...</p>
+
+<Appear>
+  <p>Modern browsers (or polyfills)</p>
+  <p>Specs evolving into V2</p>
+  <p>Bring your own state management</p>
+  <p>Bring your own rendering management</p>
+</Appear>
 
 ```notes
 Polyfills exist, but that's like shipping a library.
 v0s of Custom Elements and Shadow DOM are supported but V1 on its ways
 Ends up being a bunch of work you have to do yourself
+I think React beats this out, for now.
 ```
 ---
 
