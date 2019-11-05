@@ -1,0 +1,234 @@
+import { Appear, Head, Image } from 'mdx-deck'
+import { FullScreenCode, Split } from 'mdx-deck/layouts'
+
+import Link from './components/Link'
+
+export { default as theme } from './cfstheme'
+
+<Head>
+  <title>Introduction to Web Components</title>
+</Head>
+
+# Introduction to Web Components
+
+by Miles Rausch
+
+[http://milesrausch.com](http://milesrausch.com)
+
+```notes
+Don't ramble. Go fast.
+```
+---
+
+<Image src="./images/sponsors.png" />
+
+```notes
+Thank you to our sponsors.
+```
+---
+
+## Hyperlinks
+
+Slides:
+
+[github.com/awayken/web-components-introduction-presentation](https://github.com/awayken/web-components-introduction-presentation)
+
+Demo:
+
+[github.com/awayken/sustainable-cfs](https://github.com/awayken/sustainable-cfs)
+
+---
+
+<Image src="./images/me.jpg" size="contain" />
+
+```notes
+Miles Rausch, a Source Code Alchemist in Sioux Falls, SD.
+
+Blogs at http://milesrausch.com and writes at https://miles.ink.
+
+Developer for https://carsforsale.com.
+```
+---
+
+## We have a problem
+
+<Appear>
+  <p>Reusing bits of UI on the web <em>is hard</em>.</p>
+</Appear>
+
+```notes
+Web started as a place to link text documents.
+Today it's a place to do everything.
+Apps have different needs than pages.
+...
+Reusing UI is hard.
+```
+---
+
+## We've tried to fix it
+
+<Appear>
+  <p>YUI, jQueryUI, Dojo, MooTools, Knockout, SproutCore, Bootstrap, Foundation, Material Design for Web, Kendo UI, Adobe AIR, Wakanda, Ember, GWT, Angular, VueJS, Svelte, React, Preact, Postact?</p>
+</Appear>
+
+```notes
+Let's talk about the history of web UI and all these UI and web app frameworks.
+...
+List of frameworks
+```
+---
+
+## These solutions come at a cost
+
+<Appear>
+  <p>What if we could do it in the browser?</p>
+</Appear>
+
+```notes
+They ship with features you won't use,
+have bugs you can't fix
+create a dependency you can't live without.
+...
+What if we could do it in the browser?
+```
+---
+
+ ## Introducing Web Components
+
+<Appear>
+  <p>Create custom, reusable, encapsulated UI</p>
+  <p>Ability to package HTML, CSS and JavaScript</p>
+  <p>APIs can be used or polyfilled for modern browsers</p>
+</Appear>
+
+```notes
+A set of APIs and features for creating componentized UI.
+Independent technologies.
+```
+---
+
+## Web Components are...
+
+<Appear>
+  <p>Custom Elements API</p>
+  <p>Shadow DOM</p>
+  <p>HTML Templates</p>
+  <p>ES Modules</p>
+</Appear>
+
+```notes
+A set of APIs for creating componentized UI.
+Independent technologies.
+```
+---
+
+## Custom Elements API
+
+<Appear>
+  <p>Foundation of Web Components</p>
+  <p>Create new HTML tags</p>
+  <p>Define tags in JavaScript</p>
+  <p>"Reactions" give you lifecycle events</p>
+  <p>Bring your own render</p>
+</Appear>
+
+```notes
+Foundation of web components
+Make your own HTML elements for fun and profit.
+```
+---
+
+## Shadow DOM
+
+<Appear>
+  <p>Fully encapsulates component from user of component</p>
+  <p>DOM elements can't be queried or walked over</p>
+  <p>Styles don't leak out or leak in</p>
+  <p>As easy as <code>{`this.root = this.attachShadow({ mode: 'open' });`}</code></p>
+</Appear>
+
+```notes
+Encapsulate your markup and styling.
+```
+---
+
+## HTML Templates
+
+<Appear>
+  <p>Dormant HTML fragments that can be reused</p>
+  <p>Wrap HTML in <code>{`<template>`}</code></p>
+  <p>Import the template node and append</p>
+  <p>You choose how to populate that template</p>
+</Appear>
+
+```notes
+Dormant: Images don't load, scripts don't run, etc.
+```
+---
+
+## ES Modules
+
+<Appear>
+  <p>Better way to source JavaScript</p>
+  <p>Adds import and export capability</p>
+  <p>Modular and performant</p>
+  <p><code>{`<script type="module" src="app.js" async></script>`}</code></p>
+</Appear>
+
+```notes
+
+```
+---
+
+Demo.
+
+---
+
+## Let's use Web Components!
+
+<p>Absolutely! Except...</p>
+
+<Appear>
+  <p>Modern browsers (or polyfills)</p>
+  <p>Specs evolving into V2</p>
+  <p>Bring your own state management</p>
+  <p>Bring your own rendering management</p>
+</Appear>
+
+```notes
+Polyfills exist, but that's like shipping a library.
+v0s of Custom Elements and Shadow DOM are supported but V1 on its ways
+Ends up being a bunch of work you have to do yourself
+I think React beats this out, for now.
+```
+---
+
+## Resources
+
+  * https://www.webcomponents.org
+  * https://developers.google.com/web/fundamentals/web-components
+  * https://css-tricks.com/an-introduction-to-web-components/
+  * https://www.polymer-project.org
+  * https://stenciljs.com
+
+```notes
+
+```
+---
+
+## Carsforsale.com Is Hiring
+
+Email <Link email="erin.mcmanus@carsforsale.com">Erin McManus</Link>
+
+```notes
+TIME: 45:00
+
+In-house recruiter. Very professional and confidential. I have his cards.
+```
+---
+
+Questions?
+
+---
+
+Thanks!
