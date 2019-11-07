@@ -22,9 +22,6 @@ Don't ramble. Go fast.
 
 ## Thank you, sponsors!
 
-```notes
-Thank you to our sponsors.
-```
 ---
 
 ## Hyperlinks
@@ -41,55 +38,23 @@ Demo:
 
 <Image src="./images/me.jpg" size="contain" />
 
-```notes
-Miles Rausch, a Source Code Alchemist in Sioux Falls, SD.
-
-Blogs at http://milesrausch.com and writes at https://miles.ink.
-
-Developer for https://carsforsale.com.
-```
 ---
 
 ## We have a problem
 
 <Appear>
   <p>Reusing bits of UI on the web <em>is hard</em>.</p>
-</Appear>
-
-```notes
-Web started as a place to link text documents.
-Today it's a place to do everything.
-Apps have different needs than pages.
-...
-Reusing UI is hard.
-```
----
-
-## We've tried to fix it
-
-<Appear>
   <p>YUI, jQueryUI, Dojo, MooTools, Knockout, SproutCore, Bootstrap, Foundation, Material Design for Web, Kendo UI, Adobe AIR, Wakanda, Ember, GWT, Angular, VueJS, Svelte, React, Preact, Postact?</p>
-</Appear>
-
-```notes
-Let's talk about the history of web UI and all these UI and web app frameworks.
-...
-List of frameworks
-```
----
-
-## These solutions come at a cost
-
-<Appear>
   <p>What if we could do it in the browser?</p>
 </Appear>
 
 ```notes
-They ship with features you won't use,
-have bugs you can't fix
-create a dependency you can't live without.
-...
-What if we could do it in the browser?
+Reusing UI is hard.
+We've tried to fix it, but these solutions come at a cost.
+They ship with extra features
+Have bugs you can't fix
+Create a dependency
+What if vanilla?
 ```
 ---
 
@@ -98,7 +63,9 @@ What if we could do it in the browser?
 <Appear>
   <p>Create custom, reusable, encapsulated UI</p>
   <p>Ability to package HTML, CSS and JavaScript</p>
-  <p>APIs can be used or polyfilled for modern browsers</p>
+  <span>Custom Elements API</span>
+  <span>, Shadow DOM</span>
+  <span>, HTML Templates</span>
 </Appear>
 
 ```notes
@@ -107,33 +74,16 @@ Independent technologies.
 ```
 ---
 
-## Web Components are...
-
-<Appear>
-  <p>Custom Elements API</p>
-  <p>Shadow DOM</p>
-  <p>HTML Templates</p>
-  <p>ES Modules</p>
-</Appear>
-
-```notes
-A set of APIs for creating componentized UI.
-Independent technologies.
-```
----
-
 ## Custom Elements API
 
 <Appear>
   <p>Foundation of Web Components</p>
-  <p>Create new HTML tags</p>
-  <p>Define tags in JavaScript</p>
-  <p>"Reactions" give you lifecycle events</p>
-  <p>Bring your own render</p>
+  <p>Create new HTML tags in JavaScript</p>
+  <p>Lifecycle events, DOM APIs, no library lock-in</p>
 </Appear>
 
 ```notes
-Foundation of web components
+Foundation of web components.
 Make your own HTML elements for fun and profit.
 ```
 ---
@@ -141,14 +91,13 @@ Make your own HTML elements for fun and profit.
 ## Shadow DOM
 
 <Appear>
-  <p>Fully encapsulates component from user of component</p>
-  <p>DOM elements can't be queried or walked over</p>
+  <p>Fully encapsulates component from consumer app</p>
+  <p>Your DOM elements can't be queried or walked over</p>
   <p>Styles don't leak out or leak in</p>
-  <p>As easy as <code>{`this.root = this.attachShadow({ mode: 'open' });`}</code></p>
 </Appear>
 
 ```notes
-Encapsulate your markup and styling.
+Fully encapsulates your markup and styling.
 ```
 ---
 
@@ -156,65 +105,53 @@ Encapsulate your markup and styling.
 
 <Appear>
   <p>Dormant HTML fragments that can be reused</p>
-  <p>Wrap HTML in <code>{`<template>`}</code></p>
-  <p>Import the template node and append</p>
-  <p>You choose how to populate that template</p>
+  <p>Import the template node and insert into DOM</p>
+  <p>You choose how to populate your template</p>
 </Appear>
 
 ```notes
-Dormant: Images don't load, scripts don't run, etc.
+Images don't load, scripts don't run, etc.
 ```
 ---
 
-## ES Modules
+## Demo
 
-<Appear>
-  <p>Better way to source JavaScript</p>
-  <p>Adds import and export capability</p>
-  <p>Modular and performant</p>
-  <p><code>{`<script type="module" src="app.js" async></script>`}</code></p>
-</Appear>
-
-```notes
-
-```
----
-
-Demo.
+  * stage-0 - Original landing page
+  * stage-1 - `<cfs-tip>`
+  * stage-2 - `<tada-button>`
+  * stage-3 - Shadow DOM
+  * stage-4 - `<scroll-topper>`
+  * stage-5 - `<cfs-header>`
 
 ---
 
 ## Let's use Web Components!
 
-<p>Absolutely! Except...</p>
+<p>They're great. Some caveats:</p>
 
 <Appear>
-  <p>Modern browsers (or polyfills)</p>
+  <p>Supported in modern browsers (or with polyfills)</p>
   <p>Specs evolving into V2</p>
-  <p>Bring your own state management</p>
-  <p>Bring your own rendering management</p>
+  <p>Manage your own state</p>
+  <p>Manage your own rendering</p>
 </Appear>
 
 ```notes
 Polyfills exist, but that's like shipping a library.
-v0s of Custom Elements and Shadow DOM are supported but V1 on its ways
-Ends up being a bunch of work you have to do yourself
-I think React beats this out, for now.
+V1 is stable, but will you have upgrade envy?
+State/rendering end up being a bunch of work you have to do yourself
 ```
 ---
 
 ## Resources
 
-  * https://www.webcomponents.org
-  * https://developers.google.com/web/fundamentals/web-components
-  * https://developer.mozilla.org/en-US/docs/Web/Web_Components
-  * https://css-tricks.com/an-introduction-to-web-components/
-  * https://www.polymer-project.org
-  * https://stenciljs.com
+  * [webcomponents.org](https://www.webcomponents.org)
+  * [Google Developers](https://developers.google.com/web/fundamentals/web-components)
+  * [Mozilla Developers](https://developer.mozilla.org/en-US/docs/Web/Web_Components)
+  * [CSS Tricks](https://css-tricks.com/an-introduction-to-web-components/)
+  * [Polymer Project](https://www.polymer-project.org)
+  * [StencilJS](https://stenciljs.com)
 
-```notes
-
-```
 ---
 
 ## Carsforsale.com Is Hiring
@@ -222,9 +159,7 @@ I think React beats this out, for now.
 Email <Link email="erin.mcmanus@carsforsale.com">Erin McManus</Link>
 
 ```notes
-TIME: 45:00
-
-In-house recruiter. Very professional and confidential. I have his cards.
+In-house recruiter. Very professional and confidential.
 ```
 ---
 
