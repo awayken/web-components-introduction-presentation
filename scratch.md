@@ -1,3 +1,6 @@
+<Image src="./images/sponsors.png" />
+
+---
 
 <Image src="./images/facebook-notification.png" size="contain" />
 
